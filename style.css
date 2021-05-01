@@ -1,0 +1,240 @@
+/* * {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat" !important;
+  padding: 0;
+}
+
+.reveal {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  background-color: #f0db4f;
+  width: 100%;
+}
+
+.imgContainer {
+  width: 100vh;
+  height: 100vh;
+  float: right;
+  background: url(/hero2.jpg);
+  background-size: contain no-repeat (50%, 50%);
+  float: right;
+}
+
+h1 {
+  font-size: 5rem !important;
+  font-weight: 800 !important;
+  text-transform: lowercase;
+  letter-spacing: -5px;
+  color: #323330;
+  margin-left: 5rem;
+  transform: scaleY(0);
+  transform-origin: bottom;
+} */
+
+/*# sourceMappingURL=style.css.map */
+
+/* @media (max-width: 991.98px) {
+  h1 {
+    font-size: 2rem;
+    margin-left: 3rem;
+  }
+
+  .reveal {
+    display: flex;
+    min-width: 56%;
+  }
+} */
+
+@font-face {
+  font-family: "Raiderfont";
+  src: local("Raiderfont"), url(/fonts/Raiderfont.ttf) format("truetype");
+}
+
+body {
+  background-color: turquoise !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.logo,
+.menu,
+.collection {
+  color: #323330 !important;
+}
+
+.explore,
+.search {
+  color: #f0db4f !important;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+.left,
+.right {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  z-index: -1;
+}
+
+.left {
+  background-color: #f0db4f;
+  left: 0%;
+  width: 0%;
+}
+
+.right {
+  background-color: #323330;
+  right: 0%;
+  width: 100%;
+}
+
+.nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 80px;
+  padding: 0 20px;
+}
+
+.nav ul li {
+  display: inline-block;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.5rem;
+  font-weight: 600;
+  padding: 0 30px;
+}
+
+.nav .logo {
+  flex: 1;
+  font-size: 1.1rem;
+  letter-spacing: 0;
+  font-weight: 900;
+}
+
+.nav .menu {
+  flex: 1;
+  font-size: 1.1rem;
+}
+
+.nav .collection {
+  flex: 1;
+}
+
+.nav .explore {
+  flex: 1;
+}
+
+.nav .search {
+  flex: 1;
+}
+
+.nav .profile {
+  flex: 0;
+}
+
+.nav .profile .img {
+  background-image: url(/img/nytoprofile.jpg);
+  background-position: 50%;
+  background-size: cover;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: solid 2px turquoise;
+}
+
+.img-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 165px;
+}
+
+.img-wrapper .momentum {
+  background-image: url(/img/Colourrrrrrs2.png);
+  height: 700px;
+  width: 0;
+}
+
+.info {
+  position: absolute;
+  bottom: 0;
+  left: 180px;
+  background: rgb(0, 0, 0, 0.8);
+  padding: 0 10px;
+}
+
+.info ul li {
+  display: inline-block;
+  padding: 20px 25px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.5rem;
+  font-weight: 600;
+}
+
+.info i {
+  font-size: 1.05rem;
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  right: 100px;
+  transform: translateY(-50%);
+}
+
+.text h1 {
+  font-size: 110px;
+  color: #fff;
+  font-family: "Raiderfont";
+  text-transform: uppercase;
+}
+
+.text p {
+  font-size: 1.2rem;
+  color: #f0db4f;
+  font-family: monospace;
+}
+
+.bottomNav {
+  position: absolute;
+  bottom: 100px;
+  right: 100px;
+}
+
+.bottomNav ul li {
+  color: #f0db4f;
+  text-transform: uppercase;
+  letter-spacing: 14px;
+  margin-top: 20px;
+}
+
+.name {
+  position: absolute;
+  top: 50px;
+  transform: translateY(350%);
+  font-size: 90px;
+  font-family: "Raiderfont";
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 2px #fff;
+}
