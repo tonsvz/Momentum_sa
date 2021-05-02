@@ -427,15 +427,14 @@ ul {
     display: flex;
     justify-content: start;
     align-items: flex-start;
-    margin-left: 250px;
+    margin-left: 200px;
     margin-top: 6% !important;
   }
   .img-wrapper .momentum {
-    background-image: url(/img/Colourrrrrrs2.png);
+    background-image: url(/img/Colores2.png);
     background-position: cover;
     background-repeat: no-repeat;
     height: 500px;
-    background-size: 62%;
   }
   .text h1 {
     margin-right: 30px;
@@ -446,8 +445,7 @@ ul {
 
   .name {
     position: absolute;
-    top: 50px;
-    transform: translateY(310%) !important;
+    top: 20px;
     font-size: 65px;
     font-family: "Raiderfont";
     text-transform: uppercase;
@@ -465,7 +463,7 @@ ul {
     margin-top: 3% !important;
   }
   .momentum {
-    background-image: url(/img/Colourrrrrrs2.png);
+    background-image: url(/img/Colores2.png);
     background-position: cover;
     background-repeat: no-repeat;
     height: 600px;
