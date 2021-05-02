@@ -12,6 +12,23 @@
 //   ease: Circ.Out,
 // });
 
+window.onload = () => {
+  const palettesBG = [
+    ["red", "#1b121a", "green"],
+    ["#f0db4f", "cyan", "orange"],
+    ["turquoise", "#1b121a", "blue"],
+  ];
+
+  const randomPalette =
+    palettesBG[Math.floor(Math.random() * palettesBG.length)];
+
+  let bgColor = randomPalette[0];
+
+  const $left = document.querySelector(".left").style;
+
+  $left.backgroundColor = bgColor;
+};
+
 TweenMax.to(".left", 1, {
   delay: 0.8,
   width: "50%",
@@ -73,3 +90,5 @@ TweenMax.to(".momentum", 1, {
   width: "1000px",
   ease: Power2.easeInOut,
 });
+
+// Ejecutar funcion mediaquery para que solo se ejecute lo necesario de Tweenmax en resoluciones bajas
