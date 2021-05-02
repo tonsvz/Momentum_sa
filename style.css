@@ -460,26 +460,25 @@ ul {
     justify-content: start;
     align-items: flex-start;
     margin-left: 200px;
-    margin-top: 3% !important;
+    margin-top: 0% !important;
   }
   .momentum {
     background-image: url(/img/Colores2.png);
     background-position: cover;
     background-repeat: no-repeat;
+    margin-top: 100px;
     height: 600px;
-    background-size: 50%;
   }
 
   .text h1 {
-    margin-right: 30px;
+    margin-right: 0px;
     font-size: 42px;
     color: #fff;
     text-transform: uppercase;
   }
   .name {
     position: absolute;
-    transform: translateY(400%) !important;
-    font-size: 62px;
+    font-size: 60px;
     font-family: "Raiderfont";
     text-transform: uppercase;
     color: transparent;
