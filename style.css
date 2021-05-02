@@ -181,13 +181,13 @@ ul {
   justify-content: start;
   align-items: flex-start;
   margin-left: 200px;
-  margin-top: 3.5% !important;
+  margin-top: 4.5% !important;
 }
 .img-wrapper .momentum {
   background-image: url(/img/Colourrrrrrs2.png);
   background-position: cover;
   background-repeat: no-repeat;
-  height: 800px;
+  height: 790px;
   width: 0;
 }
 
@@ -269,26 +269,17 @@ ul {
 }
 
 @media (max-width: 767.98px) {
+  .text p {
+    font-size: 1.2rem;
+    color: #f0db4f;
+    font-family: monospace;
+  }
   .menu,
   .collection,
   .explore,
   .search {
     font-size: 0.3rem !important;
   }
-
-  .name {
-    display: flex !important;
-    justify-content: flex-start !important;
-    align-items: flex-start !important;
-    position: absolute;
-    font-size: 30px;
-    left: 10px;
-    font-family: "Raiderfont";
-    text-transform: uppercase;
-    color: transparent;
-    -webkit-text-stroke: 2px #fff;
-  }
-
   .bottomNav {
     position: absolute;
     bottom: 100px;
@@ -302,12 +293,6 @@ ul {
     letter-spacing: 6px;
     margin-top: 20px;
     font-family: "Raiderfont";
-  }
-
-  .right {
-  }
-
-  .left {
   }
 
   body {
@@ -421,5 +406,86 @@ ul {
     font-family: "Raiderfont", Montserrat, Montserrat !important;
     font-weight: 800 !important;
     letter-spacing: 0;
+  }
+
+  .name {
+    top: 40px !important;
+    transform: translateY(300%) !important;
+    font-size: 50px !important;
+    font-family: "Raiderfont";
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 2px #fff;
+  }
+}
+
+@media (max-width: 1366px) {
+  body {
+    background-color: green !important;
+  }
+  .img-wrapper {
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    margin-left: 200px;
+    margin-top: 5% !important;
+  }
+  .img-wrapper .momentum {
+    background-image: url(/img/Colourrrrrrs2.png);
+    background-position: cover;
+    background-repeat: no-repeat;
+    height: 580px;
+    background-size: 70%;
+  }
+
+  .text h1 {
+    margin-right: 30px;
+    font-size: 55px;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  .name {
+    position: absolute;
+    top: 50px;
+    transform: translateY(400%) !important;
+    font-size: 65px;
+    font-family: "Raiderfont";
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 2px #fff;
+  }
+}
+
+@media (max-width: 1280px) {
+  .img-wrapper {
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    margin-left: 200px;
+    margin-top: 3% !important;
+  }
+  .momentum {
+    background-image: url(/img/Colourrrrrrs2.png);
+    background-position: cover;
+    background-repeat: no-repeat;
+    height: 600px;
+    background-size: 50%;
+  }
+
+  .text h1 {
+    margin-right: 30px;
+    font-size: 42px;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  .name {
+    position: absolute;
+    transform: translateY(400%) !important;
+    font-size: 62px;
+    font-family: "Raiderfont";
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 2px #fff;
   }
 }
