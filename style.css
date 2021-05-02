@@ -427,15 +427,15 @@ ul {
     display: flex;
     justify-content: start;
     align-items: flex-start;
-    margin-left: 200px;
-    margin-top: 5% !important;
+    margin-left: 250px;
+    margin-top: 4.5% !important;
   }
   .img-wrapper .momentum {
     background-image: url(/img/Colourrrrrrs2.png);
     background-position: cover;
     background-repeat: no-repeat;
-    height: 580px;
-    background-size: 70%;
+    height: 500px;
+    background-size: 62%;
   }
 
   .text h1 {
