@@ -428,7 +428,7 @@ ul {
     justify-content: start;
     align-items: flex-start;
     margin-left: 250px;
-    margin-top: 4.5% !important;
+    margin-top: 6% !important;
   }
   .img-wrapper .momentum {
     background-image: url(/img/Colourrrrrrs2.png);
@@ -437,7 +437,6 @@ ul {
     height: 500px;
     background-size: 62%;
   }
-
   .text h1 {
     margin-right: 30px;
     font-size: 55px;
@@ -448,7 +447,7 @@ ul {
   .name {
     position: absolute;
     top: 50px;
-    transform: translateY(400%) !important;
+    transform: translateY(310%) !important;
     font-size: 65px;
     font-family: "Raiderfont";
     text-transform: uppercase;
