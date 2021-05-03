@@ -14,9 +14,9 @@
 
 window.onload = () => {
   const palettesBG = [
-    ["red", "#1b121a", "green"],
+    ["#ff6961", "#1b121a", "green"],
     ["#f0db4f", "cyan", "orange"],
-    ["turquoise", "#1b121a", "blue"],
+    ["#80cee1", "#1b121a", "blue"],
   ];
 
   const randomPalette =
@@ -24,9 +24,21 @@ window.onload = () => {
 
   let bgColor = randomPalette[0];
 
-  const $left = document.querySelector(".left").style;
+  const $left = document.querySelector(".left").style,
+    $right = document.querySelector("#bottomLink1").style;
+  $mid = document.querySelector("#bottomLink2").style;
+  $center = document.querySelector("#bottomLink3").style;
+  $subtext = document.querySelector(".text p").style;
+  $navlink1 = document.querySelector("#explore").style;
+  $navlink2 = document.querySelector("#search").style;
 
   $left.backgroundColor = bgColor;
+  $right.color = bgColor;
+  $mid.color = bgColor;
+  $center.color = bgColor;
+  $subtext.color = bgColor;
+  $navlink1.color = bgColor;
+  $navlink2.color = bgColor;
 };
 
 TweenMax.to(".left", 1, {
