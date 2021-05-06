@@ -12,34 +12,38 @@
 //   ease: Circ.Out,
 // });
 
-window.onload = () => {
+let colorChange = (window.onload = () => {
   const palettesBG = [
-    ["#ff6961", "#1b121a", "green"],
+    ["#ff5851", "#1b121a", "green"],
     ["#f0db4f", "cyan", "orange"],
     ["#80cee1", "#1b121a", "blue"],
+    ["#77dd77", "#1b121a", "blue"],
   ];
 
   const randomPalette =
     palettesBG[Math.floor(Math.random() * palettesBG.length)];
 
-  let bgColor = randomPalette[0];
+  let bgColor = randomPalette[0],
+    bgColor2 = randomPalette[1];
 
   const $left = document.querySelector(".left").style,
-    $right = document.querySelector("#bottomLink1").style;
-  $mid = document.querySelector("#bottomLink2").style;
-  $center = document.querySelector("#bottomLink3").style;
-  $subtext = document.querySelector(".text p").style;
-  $navlink1 = document.querySelector("#explore").style;
-  $navlink2 = document.querySelector("#search").style;
+    //   $right = document.querySelector("#bottomLink1").style;
+    // $mid = document.querySelector("#bottomLink2").style;
+    // $center = document.querySelector("#bottomLink3").style;
+    // $subtext = document.querySelector(".text p").style,
+    $navlink1 = document.querySelector("#explore").style,
+    $navlink2 = document.querySelector("#search").style;
 
   $left.backgroundColor = bgColor;
-  $right.color = bgColor;
-  $mid.color = bgColor;
-  $center.color = bgColor;
-  $subtext.color = bgColor;
+  // $right.color = bgColor;
+  // $mid.color = bgColor;
+  // $center.color = bgColor;
+  // $subtext.color = bgColor;
   $navlink1.color = bgColor;
   $navlink2.color = bgColor;
-};
+});
+
+colorChange();
 
 TweenMax.to(".left", 1, {
   delay: 0.8,
@@ -54,7 +58,7 @@ TweenMax.to(".right", 1, {
 });
 
 TweenMax.from("nav", 1, {
-  delay: 0.6,
+  delay: 1.5,
   opacity: 0,
   ease: Expo.easeInOut,
 });
@@ -92,7 +96,7 @@ TweenMax.from(".info", 1, {
 });
 
 TweenMax.from(".name", 1, {
-  delay: 1.5,
+  delay: 1,
   x: -500,
   opacity: -1.5,
   ease: Circ.easeInOut,
@@ -104,3 +108,83 @@ TweenMax.to(".momentum", 1, {
 });
 
 // Ejecutar funcion mediaquery para que solo se ejecute lo necesario de Tweenmax en resoluciones bajas
+// BarbaJS
+
+function pageTransition() {
+  let tl = gsap.timeline();
+  tl.to("ul.transition li", {
+    duration: 1.2,
+    scaleX: 1,
+    transformOrigin: "right",
+    ease: Expo.easeOut,
+    stagger: 0.1,
+  }),
+    tl.to("ul.transition li", {
+      duration: 1.6,
+      scaleX: 0,
+      transformOrigin: "right ",
+      ease: Expo.easeOut,
+      stagger: 0.1,
+      delay: 0.1,
+    }),
+    setTimeout(() => {
+      colorChange();
+    }, 1200);
+}
+
+function contentAnimation() {
+  let tl = gsap.timeline();
+  tl.from(".left", { duration: 1, opacity: 0 }),
+    TweenMax.to(".momentum", 1, {
+      delay: 1.5,
+      width: "1000px",
+      ease: Power2.easeInOut,
+    });
+
+  // tl.to(
+  //   "img",
+  //   { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)" },
+  //   "-=1.1"
+  // );
+}
+
+function delay(n) {
+  n = n || 1000;
+  return new Promise((done) => {
+    setTimeout(() => {
+      done();
+    }, n);
+  });
+}
+
+barba.init({
+  sync: true,
+  transitions: [
+    {
+      async leave(data) {
+        let done = this.async();
+
+        pageTransition();
+        await delay(1200);
+        done();
+      },
+
+      async enter(data) {
+        contentAnimation();
+      },
+      async once(data) {
+        contentAnimation();
+      },
+    },
+  ],
+});
+
+// const changer = () => {
+//   if (window.innerWidth < 400) {
+//     document.querySelector("#momName").innerHTML = "HE<br>LLO";
+//   } else {
+//     console.log("holis");
+//   }
+// };
+
+// changer();

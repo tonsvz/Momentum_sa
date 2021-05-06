@@ -14,68 +14,82 @@
     />
     <link rel="stylesheet" href="/style.css" />
   </head>
-  <body>
+  <body data-barba="wrapper">
+    <ul class="transition">
+      <li></li>
+    </ul>
     <div class="wrapper">
       <div class="left"></div>
       <div class="right"></div>
-      <nav class="nav">
-        <ul>
-          <li class="logo"><a href="/index.html">Momentum</a></li>
-          <li class="menu"><i class="fa fa-bars"></i></li>
-          <li class="collection"><a href="#">Collection</a></li>
-          <li class="explore"><a href="#" id="explore">Explore</a></li>
-          <li class="search"><a href="#" id="search">Search</a></li>
-          <li class="profile">
-            <div class="img"></div>
-          </li>
-        </ul>
-      </nav>
-
-      <div class="content">
-        <div class="img-wrapper">
-          <div class="momentum"></div>
-        </div>
-
-        <div class="info">
+      <header>
+        <nav class="nav">
           <ul>
-            <i class="fab fa-instagram"></i>
-            <li>
-              <a href="https://www.instagram.com/tonsofcode">tonsofcode</a>
+            <li class="logo logoText"><a href="/index.html">Momentum</a></li>
+            <li class="menu"><i class="fa fa-bars"></i></li>
+            <li class="collection"><a href="#">Collection</a></li>
+            <li class="explore"><a href="#" id="explore">Explore</a></li>
+            <li class="search"><a href="#" id="search">Search</a></li>
+            <li class="profile">
+              <div class="img"></div>
             </li>
-            <i class="fab fa-instagram"></i>
-            <li>
-              <a href="https://www.instagram.com/momentum_sa">momentum_sa</a>
-            </li>
-            <i class="fab fa-instagram"></i>
-            <li>
-              <a href="https://www.instagram.com/dadthecigar96">dadthecigar96</a>
-            </li>
-            
-            <!-- <li><i class="fa fa-share-alt"></i></li> -->
           </ul>
-        </div>
+        </nav>
+      </header>
+      <main data-barba="container" data-barba-namespace="home">
+        <div class="content">
+          <div class="img-wrapper">
+            <div class="momentum"></div>
+          </div>
 
-        <div class="text">
-          <h1>Momentum</h1>
-          <p>Smart Agency</p>
-        </div>
+          <div class="info">
+            <ul>
+              <i class="fab fa-instagram"></i>
+              <li>
+                <a href="https://www.instagram.com/tonsofcode">tonsofcode</a>
+              </li>
+              <i class="fab fa-instagram"></i>
+              <li>
+                <a href="https://www.instagram.com/momentum_sa">momentum_sa</a>
+              </li>
+              <i class="fab fa-instagram"></i>
+              <li>
+                <a href="https://www.instagram.com/dadthecigar96"
+                  >dadthecigar96</a
+                >
+              </li>
 
-        <div class="name">DESIGN</div>
+              <!-- <li><i class="fa fa-share-alt"></i></li> -->
+            </ul>
+          </div>
 
-        <div class="bottomNav">
-          <ul>
-            <li> <a href="#" id="bottomLink1">profile</a> </li>
-            <li><a href="#" id="bottomLink2">portfolio</a</li>
-            <li><a href="#" id="bottomLink3">contact</a</li>
-          </ul>
+          <div class="text">
+            <h1 id="momName">MOMENTUM</h1>
+            <p>Smart Agency</p>
+          </div>
+
+          <div class="name">DESIGN</div>
+
+          <div class="bottomNav">
+            <ul>
+              <li><a href="#" id="bottomLink1">about</a></li>
+              <li><a href="/portfolio.html" id="bottomLink2">portfolio</a></li>
+              <li><a href="#" id="bottomLink3">let's chat</a></li>
+            </ul>
+          </div>
         </div>
-      </div>
+      </main>
     </div>
 
-  
+    <!-- <section id="explore">
+    <div class="container subtext">
+      <h2>THIS IS A TEXT</h2>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius quo maxime veritatis! Quas cumque, ut minus illum porro nobis blanditiis, distinctio voluptate beatae ex magnam sequi quam quo laudantium ad?</p>
+    </div>
+    </section> -->
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-
+    <script src="https://unpkg.com/@barba/core"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
     <script src="/app.js"></script>
     <script
