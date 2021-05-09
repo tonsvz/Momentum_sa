@@ -89,12 +89,12 @@ TweenMax.to(".right", 1, {
 //   0.08
 // );
 
-TweenMax.from(".info", 1, {
-  delay: 1.5,
-  y: 0,
-  opacity: 0,
-  ease: Circ.easeInOut,
-});
+// TweenMax.from(".info", 1, {
+//   delay: 1.5,
+//   y: 0,
+//   opacity: 0,
+//   ease: Circ.easeInOut,
+// });
 
 // TweenMax.from(".name", 1, {
 //   delay: 1,
@@ -149,7 +149,12 @@ function contentAnimation() {
     width: "50%",
     ease: Power3.easeInOut,
   }),
-    TweenMax.from("nav", 1, {
+    TweenMax.from("nav ul li a", 1, {
+      delay: 1.2,
+      opacity: 0,
+      ease: Expo.easeInOut,
+    }),
+    TweenMax.from(".profile", 1, {
       delay: 1.2,
       opacity: 0,
       ease: Expo.easeInOut,
@@ -189,7 +194,13 @@ function contentAnimation() {
       opacity: -0.1,
       ease: Power2.easeInOut,
     }),
-    colorChange();
+    TweenMax.from(".info", 1, {
+      delay: 1.5,
+      y: 0,
+      opacity: 0,
+      ease: Circ.easeInOut,
+    });
+  colorChange();
 
   // tl.to(
   //   "img",
@@ -235,6 +246,20 @@ barba.init({
         tag.addEventListener("click", (e) => {
           console.log("works");
         });
+      },
+    },
+    {
+      namespace: "home",
+      beforeEnter(data) {
+        const changer = () => {
+          if (window.innerWidth < 400) {
+            document.querySelector("#momName").innerHTML = "HE<br>LLO";
+          } else {
+            console.log("holis");
+          }
+        };
+        changer();
+        colorChange();
       },
     },
   ],

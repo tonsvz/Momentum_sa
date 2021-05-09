@@ -104,19 +104,20 @@ ul {
   position: absolute;
   width: 50%;
   height: 100%;
-  z-index: -1;
 }
 
 .left {
   background-color: #f0db4f;
   left: 0%;
   width: 0%;
+  z-index: -10 !important;
 }
 
 .right {
   background-color: #323330;
   right: 0%;
   width: 100%;
+  z-index: -10 !important;
 }
 
 .nav ul {
@@ -278,16 +279,23 @@ ul {
 }
 
 .workContainer {
+  width: 100%;
+  height: 100vh;
+  background-color: #fff !important;
+}
+
+.workHeader {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: 100%;
-  height: 90vh;
+  width: 50%;
+  height: 100%;
 }
 
 .workHeader h1 {
   font-family: Raiderfont;
   font-size: 10rem;
+  margin-bottom: 20%;
 }
 .workHeader a {
   text-decoration: none !important;
@@ -297,6 +305,11 @@ ul {
 .workHeader a:hover {
   color: #323330;
 }
+
+.navPortfolio {
+  background-color: #fff;
+}
+
 @media (min-width: 320px) and (max-width: 480px) {
   .menu,
   .collection,
@@ -480,9 +493,18 @@ ul {
     font-family: "Raiderfont";
   }
 
+  .workHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
   .workHeader h1 {
     font-family: Raiderfont;
     font-size: 6rem;
+    margin-bottom: 50%;
   }
 }
 
@@ -637,4 +659,5 @@ ul.transition li {
   transform: scaleX(0);
   background: #f3c130;
   width: 100%;
+  z-index: 2000 !important;
 }
