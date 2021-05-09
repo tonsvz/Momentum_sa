@@ -16,9 +16,9 @@
     <link rel="stylesheet" href="/style2.css" />
   </head>
   <body data-barba="wrapper">
-    <ul class="transition">
-      <li></li>
-    </ul>
+    <div class="load-container">
+      <div class="loading-screen"></div>
+    </div>
 
     <div class="wrapper">
       <main data-barba="container" data-barba-namespace="home">
@@ -39,22 +39,23 @@
           </nav>
         </header>
         <!-- Navigation -->
-
-        <input
-          class="menu-icon"
-          type="checkbox"
-          id="menu-icon"
-          name="menu-icon"
-        />
-        <label for="menu-icon"></label>
-        <nav class="nav2">
-          <ul class="pt-5">
-            <li><a href="/portfolio.html">Work</a></li>
-            <li><a href="#">Studio</a></li>
-            <li><a href="#">News</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </nav>
+        <div class="wholeNavigation">
+          <input
+            class="menu-icon"
+            type="checkbox"
+            id="menu-icon"
+            name="menu-icon"
+          />
+          <label for="menu-icon"></label>
+          <nav class="nav2">
+            <ul class="pt-5">
+              <li><a href="/portfolio.html">Work</a></li>
+              <li><a href="#">Studio</a></li>
+              <li><a href="#">News</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
 
         <!-- Navigation -->
         <div class="content">
@@ -91,9 +92,15 @@
 
           <div class="bottomNav">
             <ul>
-              <li><a href="#" id="bottomLink1">about</a></li>
-              <li><a href="/portfolio.html" id="bottomLink2">portfolio</a></li>
-              <li><a href="#" id="bottomLink3">let's chat</a></li>
+              <li class="bottomLinks">
+                <a href="#" id="bottomLink1">about</a>
+              </li>
+              <li class="bottomLinks">
+                <a href="/portfolio.html" id="bottomLink2">portfolio</a>
+              </li>
+              <li class="bottomLinks">
+                <a href="#" id="bottomLink3">let's chat</a>
+              </li>
             </ul>
           </div>
         </div>

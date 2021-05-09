@@ -310,6 +310,27 @@ ul {
   background-color: #fff;
 }
 
+.loading-screen {
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  background-color: #f0db4f;
+  width: 0%;
+  height: 100%;
+}
+
+.load-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 2000 !important;
+  pointer-events: none;
+}
+
 @media (min-width: 320px) and (max-width: 480px) {
   .menu,
   .collection,
@@ -332,7 +353,7 @@ ul {
 
   body {
     width: 100%;
-    height: 50%;
+    height: 100%;
     background-color: #b7bcb6 !important;
   }
 
@@ -642,7 +663,7 @@ ul {
     transform: translateY(0) !important;
   }
 } */
-
+/* 
 ul.transition {
   display: flex;
   position: absolute;
@@ -659,5 +680,6 @@ ul.transition li {
   transform: scaleX(0);
   background: #f3c130;
   width: 100%;
+  height: 100%;
   z-index: 2000 !important;
-}
+} */

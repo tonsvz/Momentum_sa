@@ -113,21 +113,24 @@ TweenMax.to(".momentum", 1, {
 
 function pageTransition() {
   let tl = gsap.timeline();
-  tl.to("ul.transition li", {
+  tl.to(".loading-screen", {
     duration: 1.2,
-    scaleX: 1,
-    transformOrigin: "right",
-    ease: Expo.easeOut,
+    width: "100%",
+    left: "0%",
+    ease: Expo.easeInOut,
     stagger: 0.1,
   }),
-    tl.to("ul.transition li", {
-      duration: 1.6,
-      scaleX: 0,
-      transformOrigin: "right ",
-      ease: Expo.easeOut,
-      stagger: 0.1,
-      delay: 0.1,
+    tl.to(".loading-screen", {
+      duration: 1,
+      width: "100%",
+      left: "100%",
+      ease: Expo.easeInOut,
+      delay: 0.3,
     });
+
+  tl.set(".loading-screen", {
+    left: "-100%",
+  });
 }
 
 function contentAnimation() {
@@ -154,6 +157,11 @@ function contentAnimation() {
       opacity: 0,
       ease: Expo.easeInOut,
     }),
+    TweenMax.from(".wholeNavigation", 1, {
+      delay: 1.2,
+      opacity: 0,
+      ease: Expo.easeInOut,
+    }),
     TweenMax.from(".profile", 1, {
       delay: 1.2,
       opacity: 0,
@@ -173,7 +181,7 @@ function contentAnimation() {
   });
 
   TweenMax.staggerFrom(
-    ".bottomNav ul li",
+    ".bottomLinks a",
     1,
     {
       delay: 1,
