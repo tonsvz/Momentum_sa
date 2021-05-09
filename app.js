@@ -11,7 +11,7 @@
 //   scaleY: 1,
 //   ease: Circ.Out,
 // });
-
+// Function para randomizar el color start
 let colorChange = (window.onload = () => {
   const palettesBG = [
     ["#ff5851", "#1b121a", "green"],
@@ -23,70 +23,71 @@ let colorChange = (window.onload = () => {
   const randomPalette =
     palettesBG[Math.floor(Math.random() * palettesBG.length)];
 
-  let bgColor = randomPalette[0],
-    bgColor2 = randomPalette[1];
+  let bgColor = randomPalette[0];
 
-  const $left = document.querySelector(".left").style,
-    //   $right = document.querySelector("#bottomLink1").style;
-    // $mid = document.querySelector("#bottomLink2").style;
-    // $center = document.querySelector("#bottomLink3").style;
-    // $subtext = document.querySelector(".text p").style,
-    $navlink1 = document.querySelector("#explore").style,
-    $navlink2 = document.querySelector("#search").style;
+  const $left = document.querySelector(".left").style;
+  //   //   $right = document.querySelector("#bottomLink1").style;
+  //   // $mid = document.querySelector("#bottomLink2").style;
+  //   // $center = document.querySelector("#bottomLink3").style;
+  //   // $subtext = document.querySelector(".text p").style,
+  //   // $navlink1 = document.querySelector("#explore").style,
+  //   // $navlink2 = document.querySelector("#search").style;
 
   $left.backgroundColor = bgColor;
-  // $right.color = bgColor;
-  // $mid.color = bgColor;
-  // $center.color = bgColor;
-  // $subtext.color = bgColor;
-  $navlink1.color = bgColor;
-  $navlink2.color = bgColor;
+  //   // $right.color = bgColor;
+  //   // $mid.color = bgColor;
+  //   // $center.color = bgColor;
+  //   // $subtext.color = bgColor;
+  //   // $navlink1.color = bgColor;
+  //   // $navlink2.color = bgColor;
 });
 
-colorChange();
+colorChange(); //Function Evocation
 
+// Function para randomizar el color end
+
+// Transitiones on load
 TweenMax.to(".left", 1, {
-  delay: 0.8,
+  delay: 0.3,
   width: "50%",
   ease: Power2.easeInOut,
 });
 
 TweenMax.to(".right", 1, {
-  delay: 0.6,
+  delay: 0.2,
   width: "50%",
   ease: Power3.easeInOut,
 });
 
-TweenMax.from("nav", 1, {
-  delay: 1.5,
-  opacity: 0,
-  ease: Expo.easeInOut,
-});
+// TweenMax.from("nav", 1, {
+//   opacity: 0,
+//   ease: Expo.easeInOut,
+// });
 
-TweenMax.from(".text h1", 2, {
-  delay: 0.6,
-  x: 90,
-  opacity: -0.1,
-  ease: Power2.easeInOut,
-});
+// TweenMax.from(".text h1", 2, {
+//   delay: 0.6,
+//   x: 90,
+//   opacity: -0.1,
+//   ease: Power2.easeInOut,
+// });
 
-TweenMax.from(".text p", 1.5, {
-  delay: 1,
-  opacity: 0,
-  ease: Power3.easeInOut,
-});
+// TweenMax.from(".text p", 1.5, {
+//   delay: 1,
+//   opacity: 0,
+//   ease: Power3.easeInOut,
+// });
 
-TweenMax.staggerFrom(
-  ".bottomNav ul li",
-  1,
-  {
-    delay: 1,
-    x: 100,
-    opacity: -1,
-    ease: Circ.easeInOut,
-  },
-  0.08
-);
+// TweenMax.staggerFrom(
+//   ".bottomNav ul li",
+//   1,
+//   {
+//     delay: 1,
+//     x: 100,
+//     opacity: -1,
+//     ease: Circ.easeInOut,
+//   },
+//   0.08
+// );
 
 TweenMax.from(".info", 1, {
   delay: 1.5,
@@ -95,20 +96,20 @@ TweenMax.from(".info", 1, {
   ease: Circ.easeInOut,
 });
 
-TweenMax.from(".name", 1, {
-  delay: 1,
-  x: -500,
-  opacity: -1.5,
-  ease: Circ.easeInOut,
-});
+// TweenMax.from(".name", 1, {
+//   delay: 1,
+//   x: -500,
+//   opacity: -1.5,
+//   ease: Circ.easeInOut,
+// });
 TweenMax.to(".momentum", 1, {
-  delay: 1.5,
+  delay: 1.2,
   width: "1000px",
   ease: Power2.easeInOut,
 });
+// Transitiones on load
 
-// Ejecutar funcion mediaquery para que solo se ejecute lo necesario de Tweenmax en resoluciones bajas
-// BarbaJS
+// BarbaJS para page transition
 
 function pageTransition() {
   let tl = gsap.timeline();
@@ -126,20 +127,69 @@ function pageTransition() {
       ease: Expo.easeOut,
       stagger: 0.1,
       delay: 0.1,
-    }),
-    setTimeout(() => {
-      colorChange();
-    }, 1200);
+    });
 }
 
 function contentAnimation() {
   let tl = gsap.timeline();
   tl.from(".left", { duration: 1, opacity: 0 }),
     TweenMax.to(".momentum", 1, {
-      delay: 1.5,
+      delay: 1.2,
       width: "1000px",
       ease: Power2.easeInOut,
     });
+  TweenMax.to(".left", 1, {
+    delay: 0.3,
+    width: "50%",
+    ease: Power2.easeInOut,
+  });
+
+  TweenMax.to(".right", 1, {
+    delay: 0.2,
+    width: "50%",
+    ease: Power3.easeInOut,
+  }),
+    TweenMax.from("nav", 1, {
+      delay: 1.2,
+      opacity: 0,
+      ease: Expo.easeInOut,
+    }),
+    TweenMax.from(".text h1", 2, {
+      delay: 1,
+      x: 90,
+      opacity: -0.1,
+      ease: Power2.easeInOut,
+    });
+
+  TweenMax.from(".text p", 1.5, {
+    delay: 1,
+    opacity: 0,
+    ease: Power3.easeInOut,
+  });
+
+  TweenMax.staggerFrom(
+    ".bottomNav ul li",
+    1,
+    {
+      delay: 1,
+      x: 100,
+      opacity: -1,
+      ease: Circ.easeInOut,
+    },
+    0.08
+  ),
+    TweenMax.from(".name", 1, {
+      delay: 1,
+      x: -500,
+      opacity: -1.5,
+      ease: Circ.easeInOut,
+    }),
+    TweenMax.from(".textPortfolio", 1, {
+      x: 90,
+      opacity: -0.1,
+      ease: Power2.easeInOut,
+    }),
+    colorChange();
 
   // tl.to(
   //   "img",
@@ -169,11 +219,22 @@ barba.init({
         done();
       },
 
-      async enter(data) {
+      enter(data) {
         contentAnimation();
       },
-      async once(data) {
+      once(data) {
         contentAnimation();
+      },
+    },
+  ],
+  views: [
+    {
+      namespace: "portfolio",
+      beforeEnter(data) {
+        let tag = document.querySelector(".workHeader a ");
+        tag.addEventListener("click", (e) => {
+          console.log("works");
+        });
       },
     },
   ],

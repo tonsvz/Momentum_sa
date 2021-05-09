@@ -226,7 +226,7 @@ ul {
   position: absolute;
   top: 50%;
   right: 100px;
-  transform: translateY(-50%);
+  transform: translateY(-45%);
 }
 
 .text h1 {
@@ -277,12 +277,36 @@ ul {
   justify-content: center;
 }
 
+.workContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 90vh;
+}
+
+.workHeader h1 {
+  font-family: Raiderfont;
+  font-size: 10rem;
+}
+.workHeader a {
+  text-decoration: none !important;
+  color: #323330;
+}
+
+.workHeader a:hover {
+  color: #323330;
+}
 @media (min-width: 320px) and (max-width: 480px) {
   .menu,
   .collection,
   .explore,
   .search {
     font-size: 0.3rem !important;
+  }
+
+  a {
+    -webkit-tap-highlight-color: transparent;
   }
 
   .logoText {
@@ -455,6 +479,11 @@ ul {
     font-size: 0.8rem;
     font-family: "Raiderfont";
   }
+
+  .workHeader h1 {
+    font-family: Raiderfont;
+    font-size: 6rem;
+  }
 }
 
 @media (min-width: 1360px) and (max-width: 1366px) {
@@ -489,7 +518,7 @@ ul {
   }
 }
 
-/* @media only screen and (max-width: 1366px) and (max-width: 1366px) {
+@media (min-width: 1600px) and (max-width: 1600px) {
   body {
     background-color: rgb(191, 81, 81) !important;
   }
@@ -522,7 +551,7 @@ ul {
     color: transparent;
     -webkit-text-stroke: 2px #fff;
   }
-} */
+}
 
 /* @media only screen and (max-width: 1440px) and (max-width: 1440px) {
   body {
