@@ -262,8 +262,10 @@
   }
   .nav2 {
     right: 30px;
-    border-radius: 50%;
-    -webkit-animation: none !important;
+    border-radius: 50px;
+  }
+
+  @keyframes border-transform {
   }
 
   .nav2 ul li a {
