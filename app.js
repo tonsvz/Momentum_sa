@@ -226,6 +226,12 @@ function contentAnimation() {
     ease: Power3.easeOut,
   });
 
+  TweenMax.from(".mousey", 2.45, {
+    delay: 3.5,
+    opacity: -0.1,
+    ease: Power3.easeOut,
+  });
+
   // TweenMax.from(".boxReveal", 1, {
   //   delay: 2,
   //   width: "98%",
