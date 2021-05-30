@@ -207,7 +207,31 @@ function contentAnimation() {
       y: 0,
       opacity: 0,
       ease: Circ.easeInOut,
+    }),
+    TweenMax.from(".container-reveal", 1, {
+      delay: 1,
+      height: "100%",
+      ease: Power2.easeInOut,
     });
+  TweenMax.from(".container-reveal", 1.5, {
+    delay: 2,
+    width: "100%",
+    ease: Power2.easeInOut,
+  });
+
+  TweenMax.from(".work-container h1", 2.45, {
+    delay: 1.5,
+    y: "-100px",
+    opacity: -0.1,
+    ease: Power3.easeOut,
+  });
+
+  // TweenMax.from(".boxReveal", 1, {
+  //   delay: 2,
+  //   width: "98%",
+  //   ease: Power2.easeInOut,
+  // });
+
   colorChange();
 
   // tl.to(

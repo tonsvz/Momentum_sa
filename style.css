@@ -286,16 +286,67 @@ ul {
   position: inherit;
   justify-content: center;
 }
-
-.workContainer {
-  width: 94%;
-  margin-bottom: 10%;
-  margin: 0% 5% 5% 3%;
-  height: 88vh;
-  background-color: #f8f8f8;
+.work-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.workHeader {
+.work-container > h1 {
+  position: absolute;
+  transform: translateY(-60px);
+  z-index: 450;
+  font-weight: 900;
+  font-size: 100px;
+  font-family: Raiderfont, "Montserrat", sans-serif;
+  color: #323330;
+}
+
+.bigBox {
+  background-color: rgb(248, 248, 248);
+  margin: 15px 60px 60px 60px;
+  width: 100vw;
+  height: 85vh;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.work-image {
+  width: 50%;
+  height: 50%;
+  background-color: red;
+  position: absolute;
+  bottom: 0;
+  background-image: url(/img/worksHero.png);
+  background-size: cover;
+}
+
+.container-reveal {
+  height: 50%;
+  width: 53%;
+  background: #a4d8d8;
+  z-index: 2;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 400;
+}
+
+/* 
+.bigBox {
+  display: flex;
+  align-content: center;
+  background: #f0db4f;
+  margin: 20px;
+  margin-top: 30px;
+  width: 100%;
+  height: 100vh;
+} */
+
+/* .workHeader {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -336,18 +387,34 @@ ul {
   align-items: center;
 }
 
+.workHero {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+}
+
+.workHeroMobile {
+  display: none;
+}
+
 .squareText {
-  width: 25%;
-  height: 30%;
-  margin-left: 20%;
+  display: flex !important;
+  justify-content: flex-end !important;
+  align-content: flex-end !important;
+  width: 40%;
+  height: 50%;
+  margin-left: 10%;
 }
 
 .squareText p {
+  display: flex !important;
+  align-items: center !important;
   color: #fff;
   text-align: justify;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   font-family: "Courier New", Courier, monospace;
-}
+} */
 
 .navPortfolio {
   background-color: #fff;
@@ -566,74 +633,18 @@ ul {
     font-family: "Raiderfont";
   }
 
-  .workHeader {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 60%;
-    height: 100%;
-  }
-
-  .workHeader h1 {
-    position: absolute;
-    right: 45% !important;
-    justify-content: center;
-    text-align: center;
-    font-family: Raiderfont;
-    font-size: 5rem;
-    transform: translateY(15%) !important;
-    z-index: 1 !important;
-  }
-
-  .workContainer {
-    width: 100%;
-    height: 50vh;
+  .bigBox {
     margin: 0;
-    margin-top: -1%; /* margin-top: 10%; */
-    padding: 0;
-    background-color: #f8f8f8;
   }
 
-  .zigZag {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-    transform: translateX(-4px);
-  }
-
-  .workHeader a {
-    text-decoration: none !important;
-    color: #323330;
-  }
-
-  .workHeader a:hover {
-    color: #323330;
-  }
-
-  .squareBrown {
-    width: 100%;
-    height: 40%;
-    background-color: #b49a85;
-    display: flex;
-    justify-content: end;
-    align-items: center;
+  .work-container > h1 {
     position: absolute;
-  }
-
-  .squareText {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 70%;
-    height: 90%;
-    margin-left: 15%;
-  }
-
-  .squareText p {
-    color: #fff;
-    text-align: justify;
-    font-size: 0.9rem;
-    font-family: "Courier New", Courier, monospace;
+    transform: translateX(0px);
+    transform: translateY(-50px);
+    z-index: 450;
+    font-weight: 900;
+    font-size: 80px;
+    font-family: Raiderfont;
   }
 }
 @media (min-width: 1360px) and (max-width: 1366px) {
