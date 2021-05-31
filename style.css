@@ -329,7 +329,7 @@ ul {
 .work-image {
   width: 50%;
   height: 50%;
-  background-color: red;
+  background-color: transparent;
   position: absolute;
   bottom: 0;
   background-image: url(/img/worksHero.png);
