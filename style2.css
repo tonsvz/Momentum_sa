@@ -1,3 +1,5 @@
+/* Burger Menu */
+
 @font-face {
   font-family: "Raiderfont";
   src: local("Raiderfont"), url(/fonts/Raiderfont.ttf) format("truetype");
@@ -250,7 +252,10 @@
   width: auto;
   display: block;
 }
+/* Burger Menu */
 
+/* Media Querys  */
+/* Smartphones */
 @media (min-width: 320px) and (max-width: 480px) {
   .menu-icon:checked + label,
   .menu-icon:not(:checked) + label {
