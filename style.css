@@ -917,10 +917,9 @@ ul {
 }
 /* Medium Screns */
 @media (min-width: 1360px) and (max-width: 1366px) {
-  .boxes {
-    grid-column: 2;
+  .portfolio-container {
+    margin: 1rem 2.3rem 1rem 2.3rem;
   }
-
   .box9 {
     background-color: red;
   }
